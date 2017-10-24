@@ -62,7 +62,7 @@ extern class Tabs {
 	static function sendMessage( tabId : Int, message : Dynamic, callback : Dynamic->Void ) : Void;
 	static function create( createProperties : {?windowId:Int,?index:Int,?url:String,?active:Bool,?pinned:Bool,openerTabId:Int}, callback : Tab->Void ) : Void;
 	static function duplicate( tabId : Int, ?callback : Tab->Void ) : Void;
-	static function query( queryInfo : {?active:Bool,?pinned:Bool,?audible:Bool,?muted:Bool,?highlighted:Bool,?lastFocusedWindow:Bool,?currentWindow:Bool,?status:TabStatus,?title:String,?url:String,?windowId:Int,windowType:WindowType,?index:Int}, callback : Array<Tab>->Void ) : Void;
+	static function query( queryInfo : {?active:Bool,?pinned:Bool,?audible:Bool,?muted:Bool,?highlighted:Bool,?lastFocusedWindow:Bool,?currentWindow:Bool,?status:TabStatus,?title:String,?url:String,?windowId:Int,?windowType:WindowType,?index:Int}, callback : Array<Tab>->Void ) : Void;
 	static function highlight( highlightInfo : {?windowId:Int,tabs:Array<Int>}, ?callback : Window->Void ) : Void;
 	static function update( ?tabId : Int, updateProperties : {?url:String,?active:Bool,?highlighted:Bool,?pinned:Bool,?muted:Bool,?openerTabId:Int}, ?callback : Tab->Void ) : Void;
 	@:overload(function( ?tabId : Int, moveProperties : {?windowId:Int,?index:Int}, ?callback : Array<Tab>->Void ) : Void {})
